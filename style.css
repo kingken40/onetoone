@@ -117,8 +117,8 @@ header h1{color:var(--color-light)}
 /* PRICING */
 #pricing .row__narrow{display:flex;flex-direction:column;align-items:center}
 #pricing .section__para{max-width:576px;margin-top:16px;text-align:center}
-.plans{display:flex;flex-wrap:wrap;justify-content:space-between;margin-top:64px}
-.plan{width:31%;position:relative;display:flex;flex-direction:column;border-radius:8px;box-shadow:rgba(0,0,0,0) 0 0 0 0,rgba(0,0,0,0) 0 0 0 0,rgba(0,0,0,0.1) 0 1px 3px 0,rgba(0,0,0,0.06) 0 1px 2px 0}
+.plans{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:64px;align-items:stretch;max-width:1280px;margin-left:auto;margin-right:auto}
+.plan{width:calc((100% - 48px) / 3);position:relative;display:flex;flex-direction:column;border-radius:8px;box-shadow:rgba(0,0,0,0) 0 0 0 0,rgba(0,0,0,0) 0 0 0 0,rgba(0,0,0,0.1) 0 1px 3px 0,rgba(0,0,0,0.06) 0 1px 2px 0}
 .plan:nth-child(2){background-image:linear-gradient(135deg,rgb(76,81,191) 0%,rgb(102,126,234) 100%)}
 .plan__highlight{position:absolute;width:92%;left:50%;transform:translateX(-50%);top:0;height:8px;border-radius:8px 8px 0 0;overflow:hidden}
 .plan:nth-child(1) .plan__highlight{color:#10b981}
@@ -138,22 +138,22 @@ header h1{color:var(--color-light)}
 .plan__features{margin-top:20px}
 .plan__feature{font-size:16px;font-weight:500;color:#cbd5e0;margin-top:20px;line-height:1.625}
 .plan:nth-child(2) .plan__feature{color:white}
-.plan__bottom{padding:32px 64px;display:flex;justify-content:center}
-.plan__btn{width:100%;padding:18px 48px;line-height:1.5;border-radius:50px;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;border:none;display:flex;align-items:center;justify-content:center}
+.plan__bottom{padding:32px 32px;display:flex;justify-content:center;margin-top:auto}
+.plan__btn{width:100%;padding:14px 48px;line-height:1.5;border-radius:50px;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;border:none;display:flex;align-items:center;justify-content:center}
 .plan:nth-child(1) .plan__btn{background-color:#10b981;color:white}
 .plan:nth-child(2) .plan__btn{background-color:#1a1a1a;color:white}
 .plan:nth-child(3) .plan__btn{background-color:#b91c1c;color:white}
 
 /* TESTIMONIALS */
-#testimonials .row{display:flex}
-.testimonials__img{width:50%}
-.testimonials__description{width:50%;padding-left:64px}
-.testimonials__description .section__para{margin-top:16px}
+#testimonials .row{display:flex;flex-direction:row}
+.testimonials__img{width:65%;order:1;margin-top: 375px;}
+.testimonials__description{width:50%;padding-left:64px;order:2}
+.testimonials__description .section__para{margin-top:16px;font-size:18px}
 .testimonial{margin-top:48px}
 .testimonial__stars{color:rgb(246,173,85)!important}
 .testimonial__stars i{color:rgb(246,173,85)!important}
 .testimonial__title{font-size:20px;font-weight:700;color:#cbd5e0;margin-top:16px;line-height:1.5}
-.testimonial__para{margin:16px 0 40px 0;font-weight:500;color:var(--color-gray-blue);line-height:1.625}
+.testimonial__para{margin:16px 0 40px 0;font-weight:500;color:var(--color-gray-blue);line-height:1.625;font-size:18px}
 .testimonial__bottom{display:flex;justify-content:space-between;align-items:center}
 .testimonial__profile{display:flex;align-items:center}
 .testimonial__img{height:80px;width:80px;border-radius:500px;overflow:hidden}
@@ -219,12 +219,14 @@ footer{padding:96px 32px;background-color:rgb(100,21,255);margin-bottom:-32px;po
   .header__email{margin:0 auto}
   .header__customers{max-width:100%;padding-right:0;margin:0 auto;margin-top:16px}
   .header__img--wrapper{width:100%;max-width:768px;margin-top:64px}
-  .quality__description,.values__description,.steps__description,.testimonials__description{width:100%;max-width:576px;padding-right:0;padding-left:0}
-  .quality__img--wrapper,.values__img,.steps__img--wrapper,.testimonials__img{width:100%;max-width:576px}
+  .quality__description,.values__description,.steps__description{width:100%;max-width:576px;padding-right:0;padding-left:0}
+  .quality__img--wrapper,.values__img,.steps__img--wrapper{width:100%;max-width:576px}
   #quality .row,#values .row{flex-direction:column-reverse}
-  .quality__description,.steps__description,.values__description,.testimonials__description{padding:0;margin-top:64px;text-align:center}
-  .quality__description,.quality__img--wrapper,.steps__description,.steps__img--wrapper,.values__description,.values__img,.testimonials__description,.testimonials__img{width:100%;max-width:448px}
-  #steps .row,#testimonials .row{flex-direction:column}
+  .quality__description,.steps__description,.values__description{padding:0;margin-top:64px;text-align:center}
+  .quality__description,.quality__img--wrapper,.steps__description,.steps__img--wrapper,.values__description,.values__img{width:100%;max-width:448px}
+  .testimonials__img{width:35%;max-width:300px}
+  .testimonials__description{width:65%;padding-left:32px;padding-right:0;text-align:left}
+  #steps .row{flex-direction:column}
   .step{flex-direction:column;align-items:center}
   .step__description{margin-top:12px;margin-left:0}
   .values__list{margin-left:auto;margin-right:auto}
@@ -232,7 +234,11 @@ footer{padding:96px 32px;background-color:rgb(100,21,255);margin-bottom:-32px;po
   .value{margin-right:0;align-items:center}
   .feature{width:50%}
   #pricing .row{margin-top:40px}
-  .testimonials__description{padding-left:0}
+  .plans{flex-direction:column;align-items:center}
+  .plan{width:100%;max-width:600px;margin-bottom:4rem}
+  .start__row{flex-direction:column;gap:40px;align-items:center}
+  .start__title{text-align:center;max-width:520px}
+  .start__buttons{flex-direction:row;justify-content:center;gap:16px}
   .footer__columns{justify-content:flex-start}
   .footer__column{width:calc(100%/3)}
   .footer__bottom{flex-direction:column;align-items:center}
@@ -265,11 +271,15 @@ footer{padding:96px 32px;background-color:rgb(100,21,255);margin-bottom:-32px;po
   .testimonial__details{margin-left:0;margin-top:8px}
   .testimonial__img{height:64px;width:64px}
   .testimonial__buttons{margin-top:32px}
-  .start__title{font-size:24px}
+  #testimonials .row{flex-direction:column;align-items:center}
+  .testimonials__img{width:100%;max-width:400px;order:1}
+  .testimonials__description{width:100%;padding-left:0;padding-top:48px;text-align:center;order:2}
+  .start__row{flex-direction:column;gap:40px}
+  .start__title{font-size:24px;text-align:center;max-width:100%}
   .start__container{padding:80px 0}
-  .start__buttons{flex-direction:column}
+  .start__buttons{flex-direction:column;align-items:center}
   .start__button:nth-child(1){margin-right:0}
-  .start__button{padding:12px 24px;font-size:14px}
+  .start__button{padding:12px 24px;font-size:14px;width:auto}
   .start__button:nth-child(2){margin-top:16px}
   main{margin-bottom:80px}
   .footer__columns{justify-content:center}
